@@ -1,0 +1,227 @@
+#include <iostream>
+#include <array>
+#include <time.h>
+
+
+//// Вариант 6.
+
+////                                                         Задание 1 (По моему варианту - задание под номером 2)
+
+////                          Задание - Преобразовать матрицу, умножив элементы каждой строки на значение второго элемента этой строки.
+//int main()
+//{
+//    int y;
+//    srand(time(NULL)); 
+//    std::array <std::array <int, 7>, 7> Matrix;
+//    for(int i = 0; i <= 6; i++){ 
+//        for(int q = 0; q <= 6; q++){ 
+//            Matrix[i][q] = rand()%70;
+//            if(Matrix[i][q] < 10){  
+//                std::cout << Matrix[i][q] << " " << " ";
+//            }
+
+//            if(Matrix[i][q] > 9){
+//                std::cout << Matrix[i][q] << " ";
+//            }
+//        }
+//        std::cout << std::endl; 
+//    }
+
+//    std::cout << std::endl << std::endl;
+
+
+
+//    for(int i = 0; i <= 6; i++){ 
+//       y = Matrix[i][1];
+//        for(int q = 0; q <= 6; q++){
+//             Matrix[i][q] = y * Matrix[i][q];
+//            }
+//          }
+
+//    for(int i = 0; i <= 6; i++){ 
+//        for(int q = 0; q <= 6; q++){
+//            if((Matrix[i][q] < 10000) && (Matrix[i][q] > 999)){ 
+//                std::cout << Matrix[i][q] << " ";
+//            }
+
+//            if((Matrix[i][q] < 1000) && (Matrix[i][q] > 99)){
+//                std::cout << Matrix[i][q] << " " << " ";
+//            }
+
+//            if((Matrix[i][q] < 100) && (Matrix[i][q] > 9)){
+//                std::cout << Matrix[i][q] << " " << " " << " ";
+//            }
+
+//            if(Matrix[i][q] < 10){
+//                std::cout << Matrix[i][q] << " " << " " << " " << " ";
+//            }
+//        }
+//          std::cout << std::endl; 
+//        }
+
+//    std::cout << std::endl;
+//    return 0;
+//}
+
+
+////                                                         Задание 2 (По моему варианту - задание под номером 4)
+////                        Задание - В квадратной матрице найти сумму положительных элементов, лежащих на и вышеглавной диагонали и расположенных в чётных столбцах.
+//int main()
+//{
+//    int t = 7, y = 0;
+//    srand(time(NULL)); 
+//    std::array <std::array <int, 8>, 8> Matrix;
+//    for(int i = 1; i <= 7; i++){ 
+//        for(int q = 1; q <= 7; q++){ 
+//            Matrix[i][q] = rand()%70 - 15;
+
+//            if( (Matrix[i][q] < 0) && (Matrix[i][q] > -10)){
+//                std::cout << "  " << Matrix[i][q];
+//            }
+
+//               if( (Matrix[i][q] < -9) && (Matrix[i][q] > -100)){
+//                   std::cout << " " << Matrix[i][q];
+//               }
+//                    if( (Matrix[i][q] > -1) && (Matrix[i][q] < 10)){
+//                        std::cout << "   " << Matrix[i][q];
+//                    }
+
+//                       if( (Matrix[i][q] > 9) && (Matrix[i][q] < 100)){
+//                           std::cout << "  " << Matrix[i][q];
+//                       }
+//       }
+//        std::cout << std::endl; 
+//    }
+
+//    std::cout << std::endl << std::endl;
+
+//    for(int i = 1; i <= 7; i++){
+//        for(int q = 1; q <= t; q++){
+//            if((Matrix[i][q] > 0) && (q % 2 == 0)) {
+//               y += Matrix[i][q]; 
+//            }
+//          }
+//         t -= 1; // срез для получения диалогнали
+//        }
+
+//    for(int i = 1; i <= 7; i++){ 
+//        for(int q = 1; q <= 7; q++){ 
+
+//            if( (Matrix[i][q] < 0) && (Matrix[i][q] > -10)){
+//                std::cout << "  " << Matrix[i][q];
+//            }
+
+//               if( (Matrix[i][q] < -9) && (Matrix[i][q] > -100)){
+//                   std::cout << " " << Matrix[i][q];
+//               }
+//                    if( (Matrix[i][q] > -1) && (Matrix[i][q] < 10)){
+//                        std::cout << "   " << Matrix[i][q];
+//                    }
+
+//                       if( (Matrix[i][q] > 9) && (Matrix[i][q] < 100)){
+//                           std::cout << "  " << Matrix[i][q];
+//                       }
+//        }
+//        std::cout << std::endl; 
+//    }
+
+//    std::cout << std::endl << "Resultat: " << y << std::endl; 
+//    return 0;
+//}
+
+
+////                                                         Задание 3 (По моему варианту - задание под номером 8)
+////                        Задание - Дана матрица. Элементы первой строки — мощность электромотора, второй строки — категория мотора (число от 1 до 3). Найти самый мощный мотор категории 3.
+//int main()
+//{
+//    int max = 0;
+//    srand(time(NULL)); 
+//    std::array <std::array <int, 8>, 8> Matrix;
+//    for(int i = 0; i <= 1; i++){ 
+//        for(int q = 0; q <= 6; q++){ 
+//            if( i == 0 ){
+//                Matrix[i][q] = rand()%70 + 1;
+//               }
+//               if( i == 1 ){
+//                Matrix[i][q] = rand() % 3 + 1;
+//               }
+//                           if(Matrix[i][q] < 10){  
+//                               std::cout << Matrix[i][q] << " " << " ";
+//                           }
+
+//                           if(Matrix[i][q] > 9){
+//                               std::cout << Matrix[i][q] << " ";
+//                           }
+//              if(( Matrix[1][q] == 3 ) && ( Matrix[0][q] > max )){
+//                  max = Matrix[0][q];
+//              }
+//       }
+//        std::cout << std::endl; 
+//    }
+//    if (max == 0){
+//        std::cout << std::endl << "Net motora kategorii 3" << std::endl;
+//    }else std::cout << std::endl << "Max: " << max << std::endl; 
+//    return 0;
+//}
+
+////                                                         Задание 4 (По моему варианту - задание под номером 9 b)
+////
+////                        Задание - Объявить, реализовать заполнение данными с клавиатуры ИЛИ из файла и вывести на экран матрицу, описывающую следующие сущности.
+////                                     Состояние робота на шахматной доске. Робот характеризуется уровнемзаряда, скоростью движения.
+
+//int main(){
+//    struct Characters{
+//        int energy;
+//        int speed;
+//        int pos;
+//    };
+//    int N = 6 ,M = 6;
+//    srand(time(NULL)); 
+//    std::array <std::array <Characters, 8>, 8> Matrix;
+//      for (int i=0; i < N; i++){
+//         for (int j=0; j < M; j++){
+//    Matrix[i][j].energy=rand()%197;
+//    Matrix[i][j].speed=rand()%187;
+//       }
+//    }
+//    for (int i=0; i<N; i++){
+//      for (int j=0; j<M; j++){
+//    std::cout<< "energy:" << Matrix[i][j].energy << ".speed:" << Matrix[i][j].speed << " ";
+//      }
+//      std::cout << std::endl;
+//     }
+//    return 0;
+//}
+
+////                                                         Задание 5 (По моему варианту - задание под номером 10.2)
+////
+////                                             Реализовать вычисление матричных норм из списка выше (только для квадратных матриц).
+
+//int main()
+//{
+//    int y, l, max;
+//    srand(time(NULL)); 
+//    std::array <std::array <int, 7>, 7> Matrix;
+//    for(int i = 0; i <= 6; i++){ 
+//        for(int q = 0; q <= 6; q++){ 
+//            Matrix[i][q] = rand()%70; 
+//            l += Matrix[i][q];
+//            if(Matrix[i][q] < 10){ 
+//                std::cout << Matrix[i][q] << " " << " ";
+//            }
+
+//            if(Matrix[i][q] > 9){
+//                std::cout << Matrix[i][q] << " ";
+//            }
+//        }
+
+//        std::cout << " ...Sum = " << l;
+//        if(l > max){
+//            max = l; 
+//        }
+//        std::cout << std::endl;
+//    }
+
+//    std::cout << std::endl << std::endl;
+//    std::cout << "max = " << max << std::endl; 
+//}
